@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
+import VideoPlayer from './components/VideoPlayer';
+import Option from './components/Option';
+import Notification from './components/Notification';
 
-function App() {
+
+
+export default function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper" >
+      <AppBar className="appBar" position="static" color="inherit">
+      <Typography variant="h2" align='center'>
+       Video Chat
+       </Typography>
+      </AppBar>
+      <VideoPlayer />
+      <Option>
+        <Notification />
+      </Option>
     </div>
   );
 }
-
-export default App;
